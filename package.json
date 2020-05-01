@@ -1,0 +1,22 @@
+{
+	"name": "js-testing",
+	"version": "1.0.0",
+	"description": "",
+	"main": "assertion-library.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/olzh2102/js-testing.git"
+	},
+	"author": "me",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/olzh2102/js-testing/issues"
+	},
+	"homepage": "https://github.com/olzh2102/js-testing#readme",
+	"devDependencies": {
+		"jest": "^24.9.0"
+	}
+}
