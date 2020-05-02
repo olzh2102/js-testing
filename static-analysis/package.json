@@ -5,7 +5,7 @@
 	"main": "example.js",
 	"scripts": {
 		"build": "babel src --out-dir dist",
-		"lint": "eslint"
+		"lint": "eslint --ignore-path .gitignore ."
 	},
 	"author": "",
 	"license": "ISC",
