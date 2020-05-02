@@ -16,7 +16,6 @@ utils.getWinner = fn((p1, p2) => p1)
 
 const winner = thumbWar('Uncle Bob', 'Uncle Sam')
 assert.strictEqual(winner, 'Uncle Bob')
-console.log(utils.getWinner.mock.calls)
 assert.deepStrictEqual(
 	utils.getWinner.mock.calls,
 	[
