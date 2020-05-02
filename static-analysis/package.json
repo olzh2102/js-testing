@@ -5,7 +5,7 @@
 	"main": "example.js",
 	"scripts": {
 		"build": "babel src --extensions .js,.ts,.tsx --out-dir dist",
-		"lint": "eslint --ignore-path .gitignore .",
+		"lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
 		"check-types": "tsc",
 		"prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts|tsx)\"",
 		"format": "npm run prettier -- --write",
@@ -19,6 +19,8 @@
 		"@babel/core": "^7.5.5",
 		"@babel/preset-env": "^7.5.5",
 		"@babel/preset-typescript": "^7.9.0",
+		"@typescript-eslint/eslint-plugin": "^2.30.0",
+		"@typescript-eslint/parser": "^2.30.0",
 		"eslint": "^6.8.0",
 		"eslint-config-prettier": "^6.11.0",
 		"prettier": "^2.0.5",
