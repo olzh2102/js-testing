@@ -4,12 +4,13 @@
 	"description": "",
 	"main": "example.js",
 	"scripts": {
-		"build": "babel src --out-dir dist",
+		"build": "babel src --extensions .js,.ts,.tsx --out-dir dist",
 		"lint": "eslint --ignore-path .gitignore .",
-		"prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json)\"",
+		"check-types": "tsc",
+		"prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts|tsx)\"",
 		"format": "npm run prettier -- --write",
 		"check-format": "npm run prettier -- --list-different",
-		"validate": "npm run lint && npm run build"
+		"validate": "npm run check-types && npm run lint && npm run build"
 	},
 	"author": "",
 	"license": "ISC",
@@ -17,6 +18,7 @@
 		"@babel/cli": "^7.5.5",
 		"@babel/core": "^7.5.5",
 		"@babel/preset-env": "^7.5.5",
+		"@babel/preset-typescript": "^7.9.0",
 		"eslint": "^6.8.0",
 		"eslint-config-prettier": "^6.11.0",
 		"prettier": "^2.0.5",
