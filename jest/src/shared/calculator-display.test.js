@@ -1,14 +1,17 @@
 import React from 'react'
 import {renderWithProviders} from 'calculator-test-utils'
 import CalculatorDisplay from './calculator-display'
+import {light} from '../themes'
 
 test('renders', () => {
-    const {container} = renderWithProviders(<CalculatorDisplay value="0" />)
+    const {container} = renderWithProviders(<CalculatorDisplay value="0" />, {
+        theme: light,
+    })
 
     expect(container.firstChild).toMatchInlineSnapshot(`
         .emotion-0 {
-          color: white;
-          background: #1c191c;
+          color: #1c191c;
+          background: white;
           line-height: 130px;
           font-size: 6em;
           -webkit-flex: 1;

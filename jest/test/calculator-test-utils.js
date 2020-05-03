@@ -2,18 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {render} from '@testing-library/react'
 import {ThemeProvider} from 'emotion-theming'
-import {dark} from '../src/themes'
+import * as themes from '../src/themes'
 
-function renderWithProviders(ui, options) {
+function renderWithProviders(ui, {theme = themes.dark, ...options}) {
+    function Wrapper({children}) {
+        return <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    }
+
+    Wrapper.propTypes = {
+        children: PropTypes.node,
+    }
+
     return render(ui, {wrapper: Wrapper, ...options})
-}
-
-function Wrapper({children}) {
-    return <ThemeProvider theme={dark}>{children}</ThemeProvider>
-}
-
-Wrapper.propTypes = {
-    children: PropTypes.node,
 }
 
 export * from '@testing-library/react'
