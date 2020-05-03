@@ -1,5 +1,5 @@
 import React from 'react'
-import {renderWithProviders} from '../../test/calculator-test-utils'
+import {renderWithProviders} from 'calculator-test-utils'
 import CalculatorDisplay from './calculator-display'
 
 test('renders', () => {
