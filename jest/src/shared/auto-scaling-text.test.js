@@ -4,5 +4,5 @@ import AutoScalingText from './auto-scaling-text'
 
 test('renders', () => {
     const {debug} = render(<AutoScalingText />)
-    debug()
+    //debug()
 })
