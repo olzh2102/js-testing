@@ -7,7 +7,7 @@ test('renders a number input with a label "Favoutire Number"', () => {
     const div = document.createElement('div')
     ReactDOM.render(<FavoriteNumber />, div)
 
-    const input = queries.getByLabelText(div, 'Favorite Number') // will search inside div label with name of Favorite Number
+    const input = queries.getByLabelText(div, /favorite Number/i) // will search inside div label with name of Favorite Number
 
     expect(input).toHaveAttribute('type', 'number')
 })
