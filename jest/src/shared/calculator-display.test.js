@@ -26,7 +26,7 @@ test('renders', () => {
           <div
             class="autoScalingText"
             data-testid="total"
-            style="transform: scale(1,1);"
+            style="transform: scale(2,2);"
           >
             0
           </div>
