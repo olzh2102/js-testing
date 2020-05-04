@@ -1,9 +1,9 @@
-import {toHaveAttribute, toHaveTextContent} from '@testing-library/jest-dom'
+import * as jestDOM from '@testing-library/jest-dom'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {FavoriteNumber} from '../favorite-number'
 
-expect.extend({toHaveAttribute, toHaveTextContent})
+expect.extend(jestDOM)
 
 test('renders a number input with a label "Favoutire Number"', () => {
     const div = document.createElement('div')
