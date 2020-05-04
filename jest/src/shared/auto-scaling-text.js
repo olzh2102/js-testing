@@ -6,6 +6,7 @@ function getScale(node) {
     if (!node) {
         return 1
     }
+
     const parentNode = node.parentNode
 
     const availableWidth = parentNode.offsetWidth
