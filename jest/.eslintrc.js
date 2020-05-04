@@ -24,7 +24,7 @@ module.exports = {
                     jest: {
                         jestConfigFile: path.join(
                             __dirname,
-                            './jest.config.js',
+                            './test/jest-common.js',
                         ),
                     },
                 },
