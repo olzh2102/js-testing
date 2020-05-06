@@ -15,6 +15,7 @@ function Fade(props) {
 function HiddenMessage({children}) {
     const [show, setShow] = React.useState(false)
     const toggle = () => setShow(s => !s)
+
     return (
         <div>
             <button onClick={toggle}>Toggle</button>
