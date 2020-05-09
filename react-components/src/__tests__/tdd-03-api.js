@@ -5,6 +5,10 @@ import {Editor} from '../post-editor-03-api'
 
 jest.mock('../api')
 
+afterEach(() => {
+    jest.clearAllMocks()
+})
+
 test('renders a form with title, content, tags and a submit button', () => {
     mockSavePost.mockResolvedValueOnce()
 
