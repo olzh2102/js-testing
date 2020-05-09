@@ -1,8 +1,15 @@
 import React from 'react'
 
 function Editor() {
+    const [isSaving, setIsSaving] = React.useState(false)
+
+    function handleSubmit(e) {
+        e.preventDefault()
+        setIsSaving(true)
+    }
+
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <label htmlFor="title-input">Title</label>
             <input id="title-input" />
 
@@ -12,7 +19,9 @@ function Editor() {
             <label htmlFor="tags-input">tags</label>
             <input id="tags-input" />
 
-            <button type="submit">Submit</button>
+            <button type="submit" disabled={isSaving}>
+                Submit
+            </button>
         </form>
     )
 }
